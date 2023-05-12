@@ -55,6 +55,13 @@ public class Movement : MonoBehaviour
         else if (Input.GetKey("d") && !Input.GetKey("a"))
         {
             transform.position -= transform.TransformDirection(Vector3.left) * Time.deltaTime * movementSpeed;
+        }    
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
         }
     }
 }
