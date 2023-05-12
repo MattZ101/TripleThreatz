@@ -7,18 +7,27 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
-
+    public float JumpForce = 10;
+    public bool isOnGround = true;
     public float movementSpeed;
-
+    private Rigidbody playerRb;
+    public float gravityModifier;
 
     // Use this for initialization
     void Start()
     {
-
-
+        playerRb = GetComponent<Rigidbody>();
+        Physics.gravity *= gravityModifier;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        {
+            playerRb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            isOnGround = false;
+        }
+    }
 
     //Update is called once per frame
     void FixedUpdate()

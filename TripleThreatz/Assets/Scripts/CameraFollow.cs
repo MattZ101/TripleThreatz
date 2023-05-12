@@ -1,29 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MainCamera : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
-    public Transform player;         // The player object to follow
-    public float sensitivity = 2f;   // Mouse look sensitivity
-    public Vector2 pitchClamp = new Vector2(-90f, 90f);  // Clamp the vertical rotation (pitch) of the camera
+    public Transform player;  // Reference to the player object
+    public Vector3 offset;    // Offset from the player's position
 
-    private float rotationX = 0f;
-
-    void Start()
+    void LateUpdate()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    void Update()
-    {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
-
-        rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, pitchClamp.x, pitchClamp.y);
-
-        transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
-        player.Rotate(Vector3.up * mouseX);
+        if (player != null)
+        {
+            // Set the camera's position to the player's position with the offset
+            transform.position = player.position + offset;
+        }
     }
 }
