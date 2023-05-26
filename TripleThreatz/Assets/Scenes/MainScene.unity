@@ -369,6 +369,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f03a9075ae57f2449ece20dd1672674, type: 3}
+--- !u!1 &68743790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1f03a9075ae57f2449ece20dd1672674, type: 3}
+  m_PrefabInstance: {fileID: 68743789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &68743791
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68743790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7093372, y: 6.966858, z: 1.7967238}
+  m_Center: {x: 0.00000766595, y: 0.7258612, z: 0.46733758}
 --- !u!1 &128408297 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7124951713362477524, guid: b50a92b666a305b40a4db2401804c5b1, type: 3}
@@ -2569,6 +2587,37 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4115b843f6600774aaef4555e1d455c7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ac91b60634ac447c9eceb8e92102b46, type: 3}
+--- !u!1 &1400302486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400302487}
+  m_Layer: 0
+  m_Name: SpaceCars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1400302487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400302486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.128296, y: 8.752201, z: -127.06766}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1455932197
 PrefabInstance:
   m_ObjectHideFlags: 0
