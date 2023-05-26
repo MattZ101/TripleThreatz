@@ -2,26 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Shooting : MonoBehaviour
 {
-    public GameObject ProjectilePrefab;
+    public GameObject projectile;
+    public float launchVelocity = 700f;
+    public Transform spawnPoint;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-
-    }
-
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Fire1"))
         {
-            instantiate(ProjectilePrefab, transform.position, ProjectilePrefab.transform.rotation);
+            GameObject ball = Instantiate(projectile, transform.position,
+                                                      transform.rotation);
+            ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
+                                                 (0, launchVelocity, 0));
         }
     }
 }
