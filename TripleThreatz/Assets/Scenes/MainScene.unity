@@ -2611,9 +2611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0023e2325b9a5a4449c1782048956a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  turnSpeed: 10
-  jumpForce: 5
+  movementSpeed: 8.21
 --- !u!1001 &1211638657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4172,7 +4170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139795129}
   m_LocalRotation: {x: 0.050367348, y: -0.00032624364, z: 0.0007382746, w: 0.9987304}
-  m_LocalPosition: {x: -0.47, y: -0.313, z: 0.756}
+  m_LocalPosition: {x: -0.471, y: -0.421, z: 1.821}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4330,22 +4328,22 @@ PrefabInstance:
     - target: {fileID: 5701327495277298713, guid: b50a92b666a305b40a4db2401804c5b1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6961538
+      value: 0.48500133
       objectReference: {fileID: 0}
     - target: {fileID: 5701327495277298713, guid: b50a92b666a305b40a4db2401804c5b1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7178927
+      value: 0.50014657
       objectReference: {fileID: 0}
     - target: {fileID: 5701327495277298713, guid: b50a92b666a305b40a4db2401804c5b1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.5149985
       objectReference: {fileID: 0}
     - target: {fileID: 5701327495277298713, guid: b50a92b666a305b40a4db2401804c5b1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.49940345
       objectReference: {fileID: 0}
     - target: {fileID: 5701327495277298713, guid: b50a92b666a305b40a4db2401804c5b1,
         type: 3}
@@ -4360,7 +4358,7 @@ PrefabInstance:
     - target: {fileID: 5701327495277298713, guid: b50a92b666a305b40a4db2401804c5b1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -91.675995
       objectReference: {fileID: 0}
     - target: {fileID: 7124951713362477524, guid: b50a92b666a305b40a4db2401804c5b1,
         type: 3}

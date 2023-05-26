@@ -1,53 +1,51 @@
 
+
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float turnSpeed = 10f;
-    public float jumpForce = 5f;
-    private bool isJumping = false;
-    private Rigidbody rb;
 
+
+    public float movementSpeed;
+
+
+    // Use this for initialization
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+
+
     }
 
-    void Update()
+
+    //Update is called once per frame
+    void FixedUpdate()
     {
-        // Movement
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(horizontal, 0f, vertical) * moveSpeed * Time.deltaTime;
-        transform.Translate(movement, Space.Self);
 
-        // Rotation
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, transform.position);
-        float rayDistance;
-
-        if (groundPlane.Raycast(ray, out rayDistance))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w"))
         {
-            Vector3 point = ray.GetPoint(rayDistance);
-            Quaternion targetRotation = Quaternion.LookRotation(point - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+            transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * movementSpeed * 2.5f;
+        }
+        else if (Input.GetKey("w") && !Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * movementSpeed;
+        }
+        else if (Input.GetKey("s"))
+        {
+            transform.position -= transform.TransformDirection(Vector3.forward) * Time.deltaTime * movementSpeed;
         }
 
-        // Jumping
-        if (Input.GetButtonDown("Jump") && !isJumping)
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isJumping = true;
-        }
-    }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (Input.GetKey("a") && !Input.GetKey("d"))
         {
-            isJumping = false;
+            transform.position += transform.TransformDirection(Vector3.left) * Time.deltaTime * movementSpeed;
+        }
+        else if (Input.GetKey("d") && !Input.GetKey("a"))
+        {
+            transform.position -= transform.TransformDirection(Vector3.left) * Time.deltaTime * movementSpeed;
         }
     }
 }
