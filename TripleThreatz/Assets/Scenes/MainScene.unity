@@ -4170,6 +4170,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 128408312, guid: b50a92b666a305b40a4db2401804c5b1, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260481223411424203, guid: b50a92b666a305b40a4db2401804c5b1,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260481223411424203, guid: b50a92b666a305b40a4db2401804c5b1,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260481223411424203, guid: b50a92b666a305b40a4db2401804c5b1,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260481223411424203, guid: b50a92b666a305b40a4db2401804c5b1,
+        type: 3}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260481223411424203, guid: b50a92b666a305b40a4db2401804c5b1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5701327495277298713, guid: b50a92b666a305b40a4db2401804c5b1,
         type: 3}
       propertyPath: m_RootOrder
@@ -4264,6 +4293,11 @@ PrefabInstance:
       propertyPath: barrelEnd
       value: 
       objectReference: {fileID: 1535298335}
+    - target: {fileID: 7476093455551410348, guid: 9430947f61331f34d82e78d0025617f5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7476093455551410348, guid: 9430947f61331f34d82e78d0025617f5,
         type: 3}
       propertyPath: rocketPrefab
