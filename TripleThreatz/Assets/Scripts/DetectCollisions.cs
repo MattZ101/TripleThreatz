@@ -16,12 +16,9 @@ public class DetectCollisions : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collider Collider)
+    private void OnTriggerEnter(Collider other)
     {
-        if(gameObject.tag == "Enemy")
-        {
-            // kill playa
-            Destroy(gameObject);
-        }
+       
+        Destroy(other.gameObject);
     }
 }
