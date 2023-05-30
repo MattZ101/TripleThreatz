@@ -1,13 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    // Start is called before the first frame update
+    void Start()
     {
-        // Check if the collision is with a projectile
-        if (collision.gameObject.CompareTag("Projectile"))
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    private void OnCollisionEnter(Collider Collider)
+    {
+        if(gameObject.tag == "Enemy")
         {
-            // Destroy the object
+            // kill playa
             Destroy(gameObject);
         }
     }
